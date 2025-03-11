@@ -38,10 +38,7 @@ body::before {
 .wrapper{
   box-sizing: border-box;
   background: rgba(0, 0, 0, 0.5);
- 
-  height: 61.5vh;
-  width: 62vh;
-  padding: 10px;
+  backdrop-filter: blur(2px);
   border-radius: 20px 20px 20px 20px;
   display: flex;
   flex-direction: column;
