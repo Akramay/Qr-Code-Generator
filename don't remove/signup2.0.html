@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Signup</title>
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="/Public/CSS/Sstyle.css">
+        <script type="text/javascript" src="/Public/Script/validation.js" defer></script>
+    </head>
+
+    <body>
+    <div class="wrapper">
+        <div class="login_box">
+            <div class="login-header">
+                <span>Signup</span>
+            </div>
+
+            <!-- Wrap inputs in a form -->
+            <form id="form">
+                <div class="input_box">
+                    <input type="text" id="user" class="input-field" required>
+                    <label for="user" class="label">Email</label>
+                    <i class="bx bx-user icon"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" name="pass" id="password" class="input-field" required>
+                    <label for="password" class="label">Password</label>
+                    <i class="bx bx-lock-alt icon" id="pass-icon" onclick="togglePassword()"></i>
+                </div>
+                <div class="input_box">
+                    <input type="password" name="confirm_password" id="confirm_password" class="input-field" required>
+                    <label for="confirm_password" class="label">Confirm Password</label>
+                    <i class="bx bx-lock-alt icon" id="pass-icon" onclick="togglePassword()"></i>
+                </div>
+                <div class="input_box">
+                    <input type="submit" class="input-submit" value="Signin">
+                </div>
+            </form>
+
+            <div class="register">
+                <span>Already have an Account? <a href="/Views/index.html">Login</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
