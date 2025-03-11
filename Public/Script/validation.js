@@ -7,34 +7,6 @@ const error_message = document.getElementById('error-message')
 
 
 
-function getSignupFormErrors(firstname, email, password, repeatPassword){
-  let errors = []
-
-  if(firstname === '' || firstname == null){
-    errors.push('Firstname is required')
-    firstname_input.parentElement.classList.add('incorrect')
-  }
-  if(email === '' || email == null){
-    errors.push('Email is required')
-    email_input.parentElement.classList.add('incorrect')
-  }
-  if(password === '' || password == null){
-    errors.push('Password is required')
-    password_input.parentElement.classList.add('incorrect')
-  }
-  if(password.length < 8){
-    errors.push('Password must have at least 8 characters')
-    password_input.parentElement.classList.add('incorrect')
-  }
-  if(password !== repeatPassword){
-    errors.push('Password does not match repeated password')
-    password_input.parentElement.classList.add('incorrect')
-    repeat_password_input.parentElement.classList.add('incorrect')
-  }
-
-
-  return errors;
-}
 
 function getLoginFormErrors(email, password){
   let errors = []
@@ -66,13 +38,13 @@ allInputs.forEach(input => {
 
 function validateSignupForm(){
 
-  console.log("[LOG]Validate Signup")
+  
 
   let uname = document.getElementById('user').value;
-  if(uname.length <8){
-    alert("uname empty")
+  if(!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(uname)){
+   
     document.getElementById("uname_box").style.color="red";
-    document.getElementById("err_msg").innerHTML="Email can't be empty!"
+    document.getElementById("err_msg").innerHTML="Email not valid!"
     return false;
 
   }
