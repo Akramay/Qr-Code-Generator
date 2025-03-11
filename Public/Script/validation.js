@@ -5,24 +5,7 @@ const password_input = document.getElementById('password-input')
 const repeat_password_input = document.getElementById('repeat-password-input')
 const error_message = document.getElementById('error-message')
 
-form.addEventListener('submit', (e) => {
-  let errors = []
 
-  if(firstname_input){
-    // If we have a firstname input then we are in the signup
-    errors = getSignupFormErrors(firstname_input.value, email_input.value, password_input.value, repeat_password_input.value)
-  }
-  else{
-    // If we don't have a firstname input then we are in the login
-    errors = getLoginFormErrors(email_input.value, password_input.value)
-  }
-
-  if(errors.length > 0){
-    // If there are any errors
-    e.preventDefault()
-    error_message.innerText  = errors.join(". ")
-  }
-})
 
 function getSignupFormErrors(firstname, email, password, repeatPassword){
   let errors = []
@@ -78,3 +61,35 @@ allInputs.forEach(input => {
     }
   })
 })
+
+
+
+function validateSignupForm(){
+
+  console.log("[LOG]Validate Signup")
+
+  let uname = document.getElementById('user').value;
+  if(uname.length <8){
+    alert("uname empty")
+    document.getElementById("uname_box").style.color="red";
+    document.getElementById("err_msg").innerHTML="Email can't be empty!"
+    return false;
+
+  }
+  let psswd = document.getElementById('password').value;
+  if(!/^(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/.test(psswd) ){
+    document.getElementById("password").style.color="red";
+    document.getElementById("err_msg").innerHTML="Your password is too weak!"
+    return false;
+
+  }
+  let cnfrm_psswd = document.getElementById('confirm_password').value;
+  if(cnfrm_psswd != psswd){
+    document.getElementById("cnfmpsswd_box").style.color="red";
+    document.getElementById("err_msg").innerHTML="Your passwords does not match!"
+    return false;
+
+  }
+
+
+}
