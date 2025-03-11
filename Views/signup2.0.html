@@ -7,7 +7,7 @@
         <title>Signup</title>
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <link rel="stylesheet" href="/Public/CSS/Sstyle.css">
-        <script type="text/javascript" src="/Public/Script/validation.js" defer></script>
+
     </head>
 
     <body>
@@ -18,21 +18,27 @@
             </div>
 
             <!-- Wrap inputs in a form -->
-            <form id="form">
-                <div class="input_box">
+
+            <!--This method needs to be a post method. However, Live server doesn't allow for post requests.-->
+            <!--Change get request to POST in PROD-->
+            <form method="get" id="form" onsubmit="return validateSignupForm()">
+                <div id="uname_box" class="input_box">
                     <input type="text" id="user" class="input-field" required>
                     <label for="user" class="label">Email</label>
                     <i class="bx bx-user icon"></i>
                 </div>
                 <div class="input_box">
-                    <input type="password" name="pass" id="password" class="input-field" required>
+                    <input type="password" name="pass" id="password" class="input-field" required >
                     <label for="password" class="label">Password</label>
                     <i class="bx bx-lock-alt icon" id="pass-icon" onclick="togglePassword()"></i>
                 </div>
-                <div class="input_box">
-                    <input type="password" name="confirm_password" id="confirm_password" class="input-field" required>
+                <div id="cnfmpsswd_box" class="input_box">
+                    <input  type="password" name="confirm_password" id="confirm_password" class="input-field" required>
                     <label for="confirm_password" class="label">Confirm Password</label>
                     <i class="bx bx-lock-alt icon" id="pass-icon" onclick="togglePassword()"></i>
+                </div>
+                <div id="errmsg_container">
+                    <p id="err_msg" style="color: red;"></p>
                 </div>
                 <div class="input_box">
                     <input type="submit" class="input-submit" value="Signin">
@@ -44,6 +50,9 @@
             </div>
         </div>
     </div>
+
+    <script type="text/javascript" src="/Public/Script/validation.js" defer></script>
+
 </body>
 
 

@@ -1,12 +1,13 @@
 const form = document.getElementById('form')
 const email_input = document.getElementById('user') 
 const password_input = document.getElementById('pass') 
-const confirm_password_input = document.querySelector("input[name='confirm_password']") 
+
 const error_message = document.getElementById('error-message') 
 
 form.addEventListener('submit', (e) => {
   let errors = []
 
+  const confirm_password_input = document.getElementById("confirm_password").value 
   if (confirm_password_input) {
     // If confirm password field exists, we are in signup
     errors = getSignupFormErrors(email_input.value, password_input.value, confirm_password_input.value)
@@ -73,3 +74,6 @@ allInputs.forEach(input => {
     }
   })
 })
+
+
+
