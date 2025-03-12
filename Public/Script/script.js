@@ -94,3 +94,4 @@ function loginValidation(){
     return false
   }
 }
+
