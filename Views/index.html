@@ -17,19 +17,22 @@
                 <span>Login</span>
             </div>
             <p id="error-message" style="color: red;"></p>
-            <div class="input_box">
-                <input type="text" id="user" class="input-field" required>
-                <label for="user" class="label"> Email </label>
-                <i class="bx bx-user icon"></i>
-            </div>
-            <div class="input_box">
-                <input type="password" id="pass" class="input-field" required>
-                <label for="pass" class="label">Password</label>
-                <i class="bx bx-lock-alt icon" id="pass-icon" onclick="togglePassword()"></i>
-            </div>
-            <div class="input_box">
-                <input type="submit" class="input-submit" value="Signin">
-            </div>
+            <form method="get" onsubmit="return loginValidation()">
+                <div id="uname_box" class="input_box">
+                    <input type="text" id="user" class="input-field" >
+                    <label for="user" class="label"> Email </label>
+                    <i class="bx bx-user icon"></i>
+                </div>
+                <div id="psswd_box" class="input_box">
+                    <input type="password" id="pass" class="input-field" >
+                    <label for="pass" class="label">Password</label>
+                    <i class="bx bx-lock-alt icon" id="pass-icon" onclick="togglePassword()"></i>
+                </div>
+                <div class="input_box">
+                    <input type="submit" class="input-submit" value="Signin">
+                </div>
+            </form>
+
             <div class="register">
                 <span>Don't have an account? <a href="/Views/signup2.0.html">Register</a></span>
             </div>

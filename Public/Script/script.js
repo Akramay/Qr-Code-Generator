@@ -77,3 +77,20 @@ allInputs.forEach(input => {
 
 
 
+
+function loginValidation(){
+  const email = document.getElementById('user').value;
+  if(!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)){
+   
+    document.getElementById("uname_box").style.color="red";
+    document.getElementById("error-message").innerHTML="Email not valid!"
+    return false;
+
+  }
+  const psswd = document.getElementById('pass').value;
+  if(psswd==''){
+    document.getElementById("psswd_box").style.color="red";
+    document.getElementById("error-message").innerHTML="Password can't be empty"
+    return false
+  }
+}
