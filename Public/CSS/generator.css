@@ -2,14 +2,14 @@
 body {
     margin: 0;
     padding: 0;
-    background: #0a0f1f; /* Dark background */
+    background: #0a0f1f; 
     font-family: Arial, sans-serif;
     color: #fff;
   }
   
   
   .converter-wrapper {
-    padding: 120px 2rem 2rem; /* Top padding for fixed navbar */
+    padding: 120px 2rem 2rem; 
     max-width: 1000px;
     margin: 0 auto;
     text-align: center;
@@ -25,39 +25,37 @@ body {
     margin-bottom: 2rem;
   }
   
-  /* CONVERTER BOX (Flex container for form and QR side-by-side) */
+ 
   .converter-box {
     display: flex;
     background: #1b1f2d;
     border-radius: 8px;
     padding: 2rem;
     justify-content: space-between;
-    align-items: flex-start; /* top-aligned */
-    margin-bottom: 2rem; /* space before tutorial container */
+    align-items: flex-start;
+    margin-bottom: 2rem; 
   }
   
-  /* LEFT SIDE: Form & Type Selector */
   .converter-left {
     flex: 1;
     margin-right: 1rem;
   }
   
-  /* Right side: the generated QR code */
   .converter-right {
     flex: 1;
     margin-left: 1rem;
     text-align: center;
   }
   
-  /* VERTICAL DIVIDER */
+
   .vertical-divider {
     width: 1px;
     background: #46b2e0;
     margin: 0 1rem;
-    /* You could also use border-left instead of a separate div. */
+    
   }
   
-  /* QR TYPE SELECTOR (the radio buttons) */
+
   .qr-type-selector {
     display: flex;
     justify-content: center;
@@ -74,7 +72,7 @@ body {
     margin-right: 5px;
   }
   
-  /* FORM STYLES */
+
   #qrForm {
     display: flex;
     flex-direction: column;
@@ -119,7 +117,7 @@ body {
     background: #38a0cb;
   }
   
-  /* RIGHT SIDE: QR CODE DISPLAY */
+
   .converter-right h2 {
     margin-bottom: 1rem;
   }
@@ -131,7 +129,7 @@ body {
     justify-content: center;
   }
   
-  /* TUTORIAL & PRO FEATURES */
+
   .tutorial-pro-container {
     background: #1b1f2d;
     padding: 2rem;
@@ -155,7 +153,6 @@ body {
     margin-left: 1.5rem;
   }
   
-  /* Subheading for Pro Features */
   .pro-features-heading {
     color: #fff;
     background-color: #46b2e0;
