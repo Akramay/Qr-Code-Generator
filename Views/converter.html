@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QR Code Converter</title>
+
+ 
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="/Public/CSS/generator.css">
+  <link rel="stylesheet" href="/Public/CSS/base.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+
+  <header class="navbar">
+    <div class="logo">
+      <a href="./index.html">QR<span>Gen</span></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./converter.html" class="active">Converter</a></li>
+        <li><a href="./login2.0.html">Login</a></li>
+        <li><a href="./signup2.0.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+
+  <!-- MAIN CONVERTER CONTENT -->
+  <div class="converter-wrapper">
+    <h1>QR Code Converter</h1>
+    <p>Select a type, fill out the form, and generate your QR code.</p>
+
+    <!-- CONVERTER BOX (Flex container) -->
+    <div class="converter-box">
+      <!-- LEFT: Form & Radio Buttons -->
+      <div class="converter-left">
+        <!-- QR Type Selector -->
+        <div class="qr-type-selector">
+          <label>
+            <input type="radio" name="qrType" value="text" checked>
+            Text
+          </label>
+          <label>
+            <input type="radio" name="qrType" value="link">
+            Link
+          </label>
+          <label>
+            <input type="radio" name="qrType" value="vcard">
+            VCard
+          </label>
+          <label>
+            <input type="radio" name="qrType" value="email">
+            Email
+          </label>
+          <label>
+            <input type="radio" name="qrType" value="wifi">
+            Wi-Fi
+          </label>
+        </div>
+
+        
+        <form id="qrForm">
+          
+          <div class="qr-fields" data-type="text">
+            <label for="textValue">Text Content:</label>
+            <input type="text" id="textValue" placeholder="Enter your text" />
+          </div>
+
+          
+          <div class="qr-fields" data-type="link" style="display: none;">
+            <label for="linkValue">URL:</label>
+            <input type="url" id="linkValue" placeholder="https://example.com" />
+          </div>
+
+          
+          <div class="qr-fields" data-type="vcard" style="display: none;">
+            <label for="vcardName">Full Name:</label>
+            <input type="text" id="vcardName" placeholder="John Doe" />
+
+            <label for="vcardPhone">Phone Number:</label>
+            <input type="tel" id="vcardPhone" placeholder="+1 234 567 890" />
+
+            <label for="vcardEmail">Email:</label>
+            <input type="email" id="vcardEmail" placeholder="john@example.com" />
+
+            <label for="vcardCompany">Company:</label>
+            <input type="text" id="vcardCompany" placeholder="Company Name" />
+
+            <label for="vcardAddress">Address:</label>
+            <input type="text" id="vcardAddress" placeholder="123 Main St" />
+          </div>
+
+     
+          <div class="qr-fields" data-type="email" style="display: none;">
+            <label for="emailAddress">To:</label>
+            <input type="email" id="emailAddress" placeholder="recipient@example.com" />
+
+            <label for="emailSubject">Subject:</label>
+            <input type="text" id="emailSubject" placeholder="Hello" />
+
+            <label for="emailBody">Message:</label>
+            <textarea id="emailBody" placeholder="Your message here"></textarea>
+          </div>
+
+          
+          <div class="qr-fields" data-type="wifi" style="display: none;">
+            <label for="wifiSSID">SSID:</label>
+            <input type="text" id="wifiSSID" placeholder="Network Name" />
+
+            <label for="wifiPassword">Password:</label>
+            <input type="password" id="wifiPassword" placeholder="Password" />
+
+            <label for="wifiEncryption">Encryption:</label>
+            <select id="wifiEncryption">
+              <option value="WPA">WPA/WPA2</option>
+              <option value="WEP">WEP</option>
+              <option value="nopass">None</option>
+            </select>
+          </div>
+
+          
+          <button type="submit" class="generate-btn">Generate QR Code</button>
+        </form>
+      </div>
+
+      <div class="vertical-divider"></div>
+
+     
+      <div class="converter-right">
+        <h2>Your QR Code:</h2>
+        <div id="qrCodeContainer">
+          
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="tutorial-pro-container">
+      <h2>How to Use the QR Converter</h2>
+      <p>
+        1. Choose the type of QR code you want to generate (Text, Link, VCard, Email, or Wi-Fi).<br>
+        2. Fill in the relevant fields. For example, if you selected “Link,” enter your URL.<br>
+        3. Click the “Generate QR Code” button to instantly see your QR code.<br>
+        4. Scan the code with your phone’s camera or any QR scanner to verify it.
+      </p>
+
+     
+      <h3 class="pro-features-heading">Unlock Pro Features</h3>
+      <p>
+        Upgrade to Pro for advanced customization:
+        <ul>
+          <li><strong>Custom Logos:</strong> Insert your brand logo in the center of the QR code.</li>
+          <li><strong>More Styles:</strong> Choose from a variety of patterns, colors, and shapes.</li>
+          <li><strong>QR History:</strong> Save and track all your generated QR codes in one place.</li>
+        </ul>
+      </p>
+    </div>
+
+  </div>
+
+<script src="../Public/Script/generator.js"></script>
+</body>
+</html>

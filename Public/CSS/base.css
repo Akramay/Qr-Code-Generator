@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Major+Mono+Display&display=swap');
+/* Navigation Bar (adapt to match your design) */
+.navbar {
+    position: fixed;       /* Keep navbar at the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;          /* Ensure navbar stays above other elements */
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+  
+    /* Adjust background if desired */
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .navbar .logo a {
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .navbar .logo span {
+    color: #46b2e0; /* Accent color */
+  }
+  
+  .navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s;
+  }
+  
+  .navbar ul li a:hover,
+  .navbar ul li a.active {
+    color: #46b2e0;
+  }
+  

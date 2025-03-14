@@ -1,43 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/Public/CSS/Sstyle.css">
-    <script type="text/javascript" src="/Public/Script/script.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../Public/CSS/home.css">
+  <title>QR Code Generator - Home</title>
+  
+    
 </head>
-
 <body>
-    <div class="wrapper">
-        <div class="login_box">
-            <div class="login-header">
-                <span>Login</span>
-            </div>
-            <p id="error-message" style="color: red;"></p>
-            <form method="get" onsubmit="return loginValidation()">
-                <div id="uname_box" class="input_box">
-                    <input type="text" id="user" class="input-field" >
-                    <label for="user" class="label"> Email </label>
-                    <i class="bx bx-user icon"></i>
-                </div>
-                <div id="psswd_box" class="input_box">
-                    <input type="password" id="pass" class="input-field" >
-                    <label for="pass" class="label">Password</label>
-                    <i class="bx bx-lock-alt icon" id="pass-icon" onclick="togglePassword()"></i>
-                </div>
-                <div class="input_box">
-                    <input type="submit" class="input-submit" value="Signin">
-                </div>
-            </form>
-
-            <div class="register">
-                <span>Don't have an account? <a href="/Views/signup2.0.html">Register</a></span>
-            </div>
-        </div>
+  <header class="navbar">
+    <div class="logo">
+      <a href="./index.html">QR<span>Gen</span></a>
     </div>
-</body>
+    <nav>
+      <ul>
+        <li><a href="./index.html" class="active">Home</a></li>
+        <li><a href="./converter.html" >Converter</a></li>
+        <li><a href="./login2.0.html">Login</a></li>
+        <li><a href="./signup2.0.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <!-- Hero Section -->
+  <section class="hero ">
+    <div class=" hero-animation"></div>
+    <div class="hero-content">
+      <h1>Generate QR Codes in Seconds</h1>
+      <p>Instantly turn any URL or text into a customized QR code.</p>
+      <a class="cta-button" href="./converter.html">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Info/Features Section -->
+  <section class="info-section">
+    <h2>Why Use Our QR Generator?</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Fast & Easy</h3>
+        <p>No frills—just paste your content and generate a QR code instantly.</p>
+      </div>
+      <div class="feature">
+        <h3>Secure</h3>
+        <p>We take privacy seriously, ensuring your data is always safe.</p>
+      </div>
+      <div class="feature">
+        <h3>Customizable</h3>
+        <p>Choose from multiple styles, colors, and sizes for your QR codes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 QRGen. All rights reserved.</p>
+    <p><a href="#">Contact</a> | <a href="#">Privacy Policy</a></p>
+  </footer>
+</body>
 </html>
