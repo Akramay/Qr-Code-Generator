@@ -1,0 +1,4 @@
+2025/03/14 23:03:56 [emerg] 19188#280: CreateDirectory() "D:\MIU\25S-Y3S2\SPM\proj\Qr-Code-Generator/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2025/03/14 23:04:06 [emerg] 22988#23064: CreateDirectory() "D:\MIU\25S-Y3S2\SPM\proj\Qr-Code-Generator/temp/client_body_temp" failed (3: The system cannot find the path specified)
+2025/03/14 23:06:09 [emerg] 20104#21472: CreateDirectory() "D:\MIU\25S-Y3S2\SPM\proj\Qr-Code-Generator	emp" failed (123: The filename, directory name, or volume label syntax is incorrect)
+2025/03/14 23:06:36 [error] 18588#18788: *1 directory index of "D:/MIU/25S-Y3S2/SPM/proj/Qr-Code-Generator/" is forbidden, client: 127.0.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
