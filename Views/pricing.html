@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/Public/CSS/base.css">
+      <link rel="stylesheet" type="text/css" href="../Public/CSS/home.css">
+    <title>QRC-GEN | Pricing</title>
+</head>
+<style>
+
+html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.hero-animation {
+    position: absolute;
+    z-index: 0;
+    transform: translate(-0vw, 10vh);
+    width: 99vw;
+    height: 125%;
+
+  
+  /* Dark mode colors and gradient */
+  background: #121212; /* Fallback for browsers that don't support gradients */
+  background: linear-gradient(
+    135deg,
+    #121212 25%,
+    #1a1a1a 25%,
+    #1a1a1a 50%,
+    #121212 50%,
+    #121212 75%,
+    #1a1a1a 75%,
+    #1a1a1a
+  );
+  background-size: 40px 40px;
+
+  /* Animation */
+  animation: move 4s linear infinite;
+}
+
+
+</style>
+<body >
+    
+     <header class="navbar">
+    <div class="logo">
+      <a href="./index.html">QR<span>Gen</span></a>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./converter.html" >Converter</a></li>
+        <li><a href="./pricing.html" class="active">Pricing</a></li>
+        <li><a href="./login2.0.html">Login</a></li>
+        <li><a href="./signup2.0.html">Sign Up</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  
+  <section  class="pricing-section" style=" margin-top: 5rem; padding: 4rem 2rem; background: #0a0f1f; color: white; text-align: center;">
+  <h2 style="font-size: 2.5rem; margin-bottom: 2rem; text-shadow: 0 0 5px rgba(70, 178, 224, 0.7);">Choose Your Plan</h2>
+  <div class="pricing-cards" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;">
+
+    <!-- Free Plan -->
+    <div style="background: rgba(255, 255, 255, 0.05); padding: 2rem; border-radius: 12px; max-width: 300px; box-shadow: 0 0 10px rgba(255,255,255,0.05);">
+      <h3 style="color: #46b2e0; font-size: 1.5rem;">Free</h3>
+      <p style="margin: 0.5rem 0 1rem;">Start creating QR codes with essential features.</p>
+      <ul style="list-style: none; padding: 0; text-align: left;">
+        <li>✔ Basic QR types</li>
+        <li>✔ Limited scan history</li>
+        <li>✔ No customization</li>
+      </ul>
+      <a href="./converter.html" class="cta-button" style="margin-top: 1.5rem; display: inline-block;">Start Free</a>
+    </div>
+
+    <!-- Premium Plan -->
+    <div style="
+      background: rgba(255, 255, 255, 0.1); 
+      padding: 2rem; 
+      border-radius: 12px; 
+      max-width: 300px; 
+      border: 2px solid #46b2e0; 
+      box-shadow: 0 0 15px #46b2e0;
+    ">
+      <h3 style="color: #46b2e0; font-size: 1.7rem;">Premium</h3>
+      <p style="margin: 0.5rem 0 1rem;">Unlock full features and advanced customization.</p>
+      <ul style="list-style: none; padding: 0; text-align: left;">
+        <li>✔ Access to all generated QR codes</li>
+        <li>✔ More QR types (Wi-Fi, Contacts, etc.)</li>
+        <li>✔ Custom styles and logos</li>
+        <li>✔ And many more...</li>
+      </ul>
+      <a href="#" class="cta-button" style="margin-top: 1.5rem; display: inline-block;">Free Trial</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+
+  <footer class="footer">
+    <p>&copy; 2025 QRGen. All rights reserved.</p>
+    <p><a href="#">Contact</a> | <a href="#">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
