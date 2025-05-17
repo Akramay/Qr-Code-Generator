@@ -95,7 +95,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url('your-qr-background.jpg') no-repeat center center/cover;
+    /*background: url('your-qr-background.jpg') no-repeat center center/cover;*/
     position: relative;
     margin-bottom: 20vh;
   }
