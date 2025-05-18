@@ -15,7 +15,7 @@
 
 body {
   min-height: 100vh;
-  background-image: url(/Public/images/Qr_Code_image_enhanced.jpg);
+  background-image: url(/images/Qr_Code_image_enhanced.jpg);
   background-size: cover;
   background-position: right;
   overflow: hidden;

@@ -6,27 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="/Public/CSS/Sstyle.css">
-    <link rel="stylesheet" type="text/css" href="/Public/CSS/base.css">
-    <script type="text/javascript" src="/Public/Script/script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="/CSS/Sstyle.css">
+    <link rel="stylesheet" type="text/css" href="/CSS/base.css">
+    <script type="text/javascript" src="/Script/script.js" defer></script>
 </head>
 
 <body>
  <header class="navbar">
     <div class="logo">
-      <a href="./index.html">QR<span>Gen</span></a>
+      <a href="/">QR<span>Gen</span></a>
     </div>
     <nav>
       <ul>
-        <li><a href="./index.html">Home</a></li>
-        <li><a href="./converter.html" >Converter</a></li>
-        <li><a href="./pricing.html" >Pricing</a></li>
-        <li><a href="./login2.0.html" class="active">Login</a></li>
-        <li><a href="./signup2.0.html">Sign Up</a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/convert" >Converter</a></li>
+        <li><a href="/pricing" >Pricing</a></li>
+        <li><a href="/login" class="active">Login</a></li>
+        <li><a href="/signup" class="active">Sign Up</a></li>
       </ul>
     </nav>
   </header>
-
     
 
     <div class="wrapper">
@@ -35,14 +34,14 @@
                 <span>Login</span>
             </div>
             <p id="error-message" style="color: red;"></p>
-            <form method="get" onsubmit="return loginValidation()">
+            <form method="post" onsubmit="return loginValidation()">
                 <div id="uname_box" class="input_box">
-                    <input type="text" id="user" class="input-field" required>
+                    <input type="text" name="email" id="user" class="input-field" required>
                     <label for="user" class="label"> Email </label>
                     <i class="bx bx-user icon"></i>
                 </div>
                 <div id="psswd_box" class="input_box">
-                    <input type="password" id="pass" class="input-field" required>
+                    <input type="password" name="password" id="pass" class="input-field" required>
                     <label for="pass" class="label">Password</label>
                     <i class="bx bx-lock-alt icon" id="pass-icon" onclick="togglePassword()"></i>
                 </div>
@@ -52,7 +51,7 @@
             </form>
 
             <div class="register">
-                <span>Don't have an account? <a href="/Views/signup2.0.html">Register</a></span>
+                <span>Don't have an account? <a href="/signup">Register</a></span>
             </div>
         </div>
     </div>

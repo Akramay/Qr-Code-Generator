@@ -1,3 +1,6 @@
 nginx.conf
 logs
 temp
+node_modules
+*.db
+.env
