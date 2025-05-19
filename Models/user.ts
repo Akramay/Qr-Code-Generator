@@ -2,6 +2,7 @@ import {Sequelize, Model, InferAttributes, InferCreationAttributes, DataTypes, C
 import {sequelize} from '../db/db'
 
 import { Attribute, PrimaryKey } from '@sequelize/core/decorators-legacy'
+import { QrImage } from './qrcodes'
 
 export class User extends Model<InferAttributes<User>, InferCreationAttributes<User>>{
    
@@ -28,5 +29,7 @@ User.init({
     sequelize,
     tableName : 'users'
 })
+
+User.hasMany(QrImage)
 
 User.sync({alter: true})

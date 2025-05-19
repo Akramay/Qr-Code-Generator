@@ -58,4 +58,14 @@ export class UserController {
             res.status(500).send('<h1>Error Fetching Users</h1>')
         }
     }
+    static LogoutUser(req: Request, res: Response){
+        req.session.destroy((err)=>{
+            if(err){
+                res.status(500).send('<h1>Error Logging out, Try again!</h1>')
+            }
+            else{
+                res.status(301).redirect('/')
+            }
+        })
+    }
 }

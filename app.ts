@@ -42,6 +42,10 @@ app.get('/convert', (req: Request, res:Response)=>{
     res.sendFile(path.join(__dirname, 'Views', 'converter.html'))
 })
 
+app.get('/logout', UserController.LogoutUser)
+
+
+
 app.get('/allusers', UserController.FetchAllUsers)
 
 app.listen(8000)
